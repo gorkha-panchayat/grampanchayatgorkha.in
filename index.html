@@ -142,266 +142,607 @@ footer{background:#092a19;color:#b9d1c2;text-align:center;padding:28px 20px;marg
   </div>
 
 </section>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>हमारा कार्य | Before & After</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f7f9fc;
+      color: #172033;
+    }
+
+    /* =========================
+       MAIN SECTION
+    ========================== */
+
+    .work-showcase {
+      padding: 80px 20px;
+      background:
+        radial-gradient(circle at 5% 10%, #fff0cf 0, transparent 30%),
+        radial-gradient(circle at 95% 90%, #dff5ff 0, transparent 32%),
+        #f8fafc;
+    }
 
 
-<style>
+    /* =========================
+       HEADING
+    ========================== */
 
-.work-showcase {
-  padding: 80px 20px;
-  background:
-    radial-gradient(circle at top left, #fff1d6 0, transparent 35%),
-    radial-gradient(circle at bottom right, #e5f7ff 0, transparent 35%),
-    #f8fafc;
-  font-family: "Poppins", Arial, sans-serif;
-}
+    .showcase-title {
+      max-width: 750px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
 
+    .showcase-title .mini-title {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 50px;
+      background: #fff3d9;
+      color: #e58b00;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
 
-/* ---------- TITLE ---------- */
+    .showcase-title h1 {
+      font-size: clamp(30px, 5vw, 50px);
+      line-height: 1.2;
+      margin-bottom: 14px;
+      color: #172033;
+    }
 
-.showcase-title {
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto 45px;
-}
+    .showcase-title h1 span {
+      color: #ff7a00;
+    }
 
-.showcase-title span {
-  display: inline-block;
-  padding: 8px 18px;
-  border-radius: 50px;
-  background: #fff4dc;
-  color: #e58b00;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-}
-
-.showcase-title h2 {
-  margin: 0;
-  color: #182230;
-  font-size: clamp(30px, 5vw, 48px);
-  line-height: 1.2;
-}
-
-.showcase-title h2 em {
-  color: #ff7a00;
-  font-style: normal;
-}
-
-.showcase-title p {
-  color: #667085;
-  font-size: 16px;
-  margin-top: 14px;
-}
+    .showcase-title p {
+      color: #667085;
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
 
-/* ---------- BIG BEFORE / AFTER ---------- */
+    /* =========================
+       BEFORE / AFTER
+    ========================== */
 
-.before-after {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-}
+    .before-after {
+      max-width: 1200px;
+      margin: auto;
 
-.photo-box {
-  position: relative;
-  height: 440px;
-  overflow: hidden;
-  border-radius: 28px;
-  background: #ddd;
-  box-shadow: 0 20px 50px rgba(20, 30, 50, .15);
-}
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
-.photo-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .7s ease;
-}
-
-.photo-box:hover img {
-  transform: scale(1.08);
-}
+      gap: 25px;
+    }
 
 
-/* Dark gradient */
+    .photo-box {
+      position: relative;
 
-.photo-box::after,
-.small-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,.85),
-    rgba(0,0,0,.25) 55%,
-    transparent
-  );
-}
+      height: 450px;
 
+      overflow: hidden;
 
-/* ---------- CONTENT ---------- */
+      border-radius: 28px;
 
-.photo-content {
-  position: absolute;
-  z-index: 2;
-  left: 30px;
-  right: 30px;
-  bottom: 30px;
-  color: white;
-}
+      background: #ddd;
 
-.photo-content h3 {
-  font-size: 27px;
-  margin: 12px 0 5px;
-}
+      box-shadow:
+        0 20px 50px rgba(20, 30, 50, .14);
 
-.photo-content p {
-  margin: 0;
-  color: rgba(255,255,255,.85);
-}
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+    }
 
 
-/* ---------- TAGS ---------- */
+    .photo-box:hover {
+      transform: translateY(-7px);
 
-.tag {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 50px;
-  color: white;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-}
-
-.before-tag {
-  background: #475467;
-}
-
-.after-tag {
-  background: linear-gradient(135deg, #00b96b, #00d084);
-  box-shadow: 0 6px 20px rgba(0, 200, 120, .35);
-}
+      box-shadow:
+        0 30px 65px rgba(20, 30, 50, .22);
+    }
 
 
-/* ---------- SMALL CARDS ---------- */
+    .photo-box img {
+      width: 100%;
+      height: 100%;
 
-.small-gallery {
-  max-width: 1200px;
-  margin: 25px auto 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-}
+      object-fit: cover;
 
-.small-card {
-  position: relative;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 25px;
-  box-shadow: 0 15px 40px rgba(20, 30, 50, .12);
-}
+      display: block;
 
-.small-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .6s ease;
-}
-
-.small-card:hover img {
-  transform: scale(1.08);
-}
-
-.small-content {
-  position: absolute;
-  z-index: 2;
-  left: 25px;
-  bottom: 25px;
-  color: white;
-}
-
-.small-content span {
-  display: inline-block;
-  background: #ff7a00;
-  padding: 7px 13px;
-  border-radius: 30px;
-  font-size: 11px;
-  font-weight: 800;
-}
-
-.small-card:last-child .small-content span {
-  background: #635bff;
-}
-
-.small-content h3 {
-  font-size: 23px;
-  margin: 10px 0 4px;
-}
-
-.small-content p {
-  margin: 0;
-  color: rgba(255,255,255,.85);
-}
+      transition: transform .7s ease;
+    }
 
 
-/* ---------- HOVER ---------- */
-
-.photo-box,
-.small-card {
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.photo-box:hover,
-.small-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 25px 60px rgba(20, 30, 50, .20);
-}
+    .photo-box:hover img {
+      transform: scale(1.08);
+    }
 
 
-/* ---------- MOBILE ---------- */
+    /* Image Dark Gradient */
 
-@media (max-width: 768px) {
+    .photo-box::after {
+      content: "";
 
-  .work-showcase {
-    padding: 55px 15px;
-  }
+      position: absolute;
 
-  .before-after,
-  .small-gallery {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
+      inset: 0;
 
-  .photo-box {
-    height: 360px;
-    border-radius: 22px;
-  }
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,.88) 0%,
+          rgba(0,0,0,.35) 50%,
+          rgba(0,0,0,0) 80%
+        );
+    }
 
-  .small-card {
-    height: 280px;
-    border-radius: 22px;
-  }
 
-  .photo-content {
-    left: 22px;
-    bottom: 22px;
-  }
+    /* =========================
+       PHOTO CONTENT
+    ========================== */
 
-  .photo-content h3 {
-    font-size: 22px;
-  }
+    .photo-content {
+      position: absolute;
 
-}
+      z-index: 2;
 
-</style>
+      left: 30px;
+      right: 30px;
+      bottom: 30px;
 
-<section id="gallery">
-<div class="section-head"><div><div class="eyebrow">Gallery</div><h2>फोटो गैलरी</h2></div><p>विकास कार्यों की Before और After तस्वीरें यहाँ प्रदर्शित होगा।</p></div>
-<div class="gallery"><div class="pic">Before — फोटो जोड़ें</div><div class="pic">After — फोटो जोड़ें</div><div class="pic">कार्य प्रगति — फोटो</div><div class="pic">पूर्ण कार्य — फोटो</div></div>
-</section>
+      color: white;
+    }
+
+
+    .photo-content h2 {
+      font-size: 27px;
+
+      margin-top: 12px;
+      margin-bottom: 5px;
+    }
+
+
+    .photo-content p {
+      font-size: 14px;
+
+      color: rgba(255,255,255,.85);
+    }
+
+
+    /* =========================
+       TAG
+    ========================== */
+
+    .tag {
+      display: inline-block;
+
+      padding: 8px 16px;
+
+      border-radius: 50px;
+
+      color: white;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+    }
+
+
+    .before-tag {
+      background: #475467;
+    }
+
+
+    .after-tag {
+      background:
+        linear-gradient(
+          135deg,
+          #00ad68,
+          #00d084
+        );
+
+      box-shadow:
+        0 6px 20px rgba(0, 200, 120, .35);
+    }
+
+
+    /* =========================
+       SMALL GALLERY
+    ========================== */
+
+    .small-gallery {
+      max-width: 1200px;
+
+      margin: 25px auto 0;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 25px;
+    }
+
+
+    .small-card {
+      position: relative;
+
+      height: 300px;
+
+      overflow: hidden;
+
+      border-radius: 25px;
+
+      box-shadow:
+        0 15px 40px rgba(20, 30, 50, .12);
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+    }
+
+
+    .small-card:hover {
+      transform: translateY(-7px);
+
+      box-shadow:
+        0 25px 55px rgba(20, 30, 50, .20);
+    }
+
+
+    .small-card img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition: transform .7s ease;
+    }
+
+
+    .small-card:hover img {
+      transform: scale(1.08);
+    }
+
+
+    /* Gradient */
+
+    .small-card::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,.88),
+          rgba(0,0,0,.30) 55%,
+          transparent
+        );
+    }
+
+
+    /* =========================
+       SMALL CARD CONTENT
+    ========================== */
+
+    .small-content {
+      position: absolute;
+
+      z-index: 2;
+
+      left: 25px;
+      bottom: 25px;
+
+      color: white;
+    }
+
+
+    .small-content .small-tag {
+      display: inline-block;
+
+      padding: 7px 13px;
+
+      border-radius: 30px;
+
+      background: #ff7a00;
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+    }
+
+
+    .small-card.completed .small-tag {
+      background: #635bff;
+    }
+
+
+    .small-content h3 {
+      font-size: 23px;
+
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+
+
+    .small-content p {
+      font-size: 13px;
+
+      color: rgba(255,255,255,.85);
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 768px) {
+
+      .work-showcase {
+        padding: 55px 15px;
+      }
+
+
+      .before-after {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+      }
+
+
+      .small-gallery {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+      }
+
+
+      .photo-box {
+        height: 360px;
+
+        border-radius: 22px;
+      }
+
+
+      .small-card {
+        height: 280px;
+
+        border-radius: 22px;
+      }
+
+
+      .photo-content {
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+      }
+
+
+      .photo-content h2 {
+        font-size: 22px;
+      }
+
+
+      .small-content {
+        left: 20px;
+        bottom: 20px;
+      }
+
+
+      .small-content h3 {
+        font-size: 20px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- ==================================================
+       BEFORE / AFTER WORK SECTION
+  =================================================== -->
+
+  <section class="work-showcase">
+
+
+    <!-- HEADING -->
+
+    <div class="showcase-title">
+
+      <div class="mini-title">
+        ✨ हमारे प्रोजेक्ट्स
+      </div>
+
+      <h1>
+        काम से पहले और
+        <span>काम के बाद</span>
+      </h1>
+
+      <p>
+        हमारे द्वारा किए गए कार्यों की शानदार झलक देखें।
+        शुरुआत से लेकर अंतिम परिणाम तक का पूरा सफर।
+      </p>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         BEFORE & AFTER
+    =================================================== -->
+
+    <div class="before-after">
+
+
+      <!-- BEFORE PHOTO -->
+
+      <div class="photo-box">
+
+        <img
+          src="images/before.jpg"
+          alt="काम शुरू होने से पहले"
+        >
+
+        <div class="photo-content">
+
+          <div class="tag before-tag">
+            BEFORE
+          </div>
+
+          <h2>
+            काम शुरू होने से पहले
+          </h2>
+
+          <p>
+            प्रोजेक्ट की शुरुआती स्थिति
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- AFTER PHOTO -->
+
+      <div class="photo-box">
+
+        <img
+          src="images/after.jpg"
+          alt="काम पूरा होने के बाद"
+        >
+
+        <div class="photo-content">
+
+          <div class="tag after-tag">
+            AFTER
+          </div>
+
+          <h2>
+            काम पूरा होने के बाद
+          </h2>
+
+          <p>
+            शानदार और नया अंतिम परिणाम
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         WORK PROGRESS + COMPLETED
+    =================================================== -->
+
+    <div class="small-gallery">
+
+
+      <!-- WORK PROGRESS -->
+
+      <div class="small-card">
+
+        <img
+          src="images/work-progress.jpg"
+          alt="कार्य प्रगति पर"
+        >
+
+        <div class="small-content">
+
+          <div class="small-tag">
+            🔨 WORK IN PROGRESS
+          </div>
+
+          <h3>
+            कार्य प्रगति पर
+          </h3>
+
+          <p>
+            काम को पूरा करने की प्रक्रिया
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- COMPLETED WORK -->
+
+      <div class="small-card completed">
+
+        <img
+          src="images/completed.jpg"
+          alt="पूर्ण कार्य"
+        >
+
+        <div class="small-content">
+
+          <div class="small-tag">
+            🏆 COMPLETED
+          </div>
+
+          <h3>
+            पूर्ण कार्य
+          </h3>
+
+          <p>
+            पूरी तरह तैयार अंतिम प्रोजेक्ट
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+</body>
+</html>
+
 
 <section id="notices">
 <div class="section-head"><div><div class="eyebrow">Latest Updates</div><h2>सूचनाएँ और घोषणाएँ</h2></div></div>
