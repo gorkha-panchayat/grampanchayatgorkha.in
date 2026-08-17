@@ -80,221 +80,672 @@ footer{background:#092a19;color:#b9d1c2;text-align:center;padding:28px 20px;marg
 <div class="fund"><div class="fundbox"><span>प्राप्त फंड</span><strong>₹ —</strong><span>वित्तीय वर्ष 2026–27</span></div><div class="fundbox"><span>दर्ज कुल खर्च</span><strong>₹ —</strong><span>सत्यापित रिकॉर्ड के अनुसार अपडेट करें</span></div></div>
 </section>
 <section class="work-showcase">
+<!-- =====================================================
+     PROFESSIONAL PHOTO GALLERY
+===================================================== -->
 
- <!DOCTYPE html>
-<html lang="hi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<section class="photo-gallery-section" id="photo-gallery">
 
-    <title>ग्राम पंचायत कार्य गैलरी</title>
+  <div class="gallery-header">
+    <div class="gallery-badge">📸 PROJECT GALLERY</div>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <h2>
+      हमारे काम की <span>शानदार झलक</span>
+    </h2>
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
-        }
+    <p>
+      Before से लेकर Final Result तक हमारे कार्यों की तस्वीरें देखें।
+    </p>
+  </div>
 
-        /* Gallery Section */
-        .gallery-section {
-            width: 100%;
-            padding: 40px 15px;
-        }
 
-        .gallery-title {
-            text-align: center;
-            margin-bottom: 25px;
-        }
+  <div class="photo-gallery-grid">
 
-        .gallery-title h2 {
-            font-size: 28px;
-            color: #14532d;
-            margin-bottom: 8px;
-        }
 
-        .gallery-title p {
-            color: #64748b;
-            font-size: 15px;
-        }
+    <!-- =================================================
+         BEFORE
+    ================================================== -->
 
-        /* Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-            max-width: 1100px;
-            margin: auto;
-        }
+    <div class="photo-upload-card before-card">
 
-        /* Photo Box */
-        .pic {
-            height: 180px;
-            border-radius: 15px;
-            background: linear-gradient(135deg, #ffffff, #f0fdf4);
-            border: 1px solid #dbe5df;
+      <div class="photo-preview" id="beforePreview">
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        <div class="upload-placeholder">
 
-            text-align: center;
-            padding: 15px;
+          <div class="upload-icon">📷</div>
 
-            color: #64748b;
-            font-size: 15px;
-            font-weight: 600;
+          <h3>Before Photo</h3>
 
-            box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
+          <p>काम शुरू होने से पहले की फोटो</p>
 
-            transition: all 0.3s ease;
-            cursor: pointer;
-            overflow: hidden;
-        }
+          <label for="beforeImage" class="upload-button">
+            + फोटो अपलोड करें
+          </label>
 
-        .pic-icon {
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            background: #dcfce7;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 27px;
-            margin-bottom: 12px;
-
-            transition: 0.3s ease;
-        }
-
-        .pic:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
-            border-color: #16a34a;
-        }
-
-        .pic:hover .pic-icon {
-            background: #16a34a;
-            transform: scale(1.08);
-        }
-
-        .pic-title {
-            color: #334155;
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .pic-subtitle {
-            color: #94a3b8;
-            font-size: 13px;
-            font-weight: 400;
-        }
-
-        /* Tablet */
-        @media (max-width: 900px) {
-            .gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .pic {
-                height: 175px;
-            }
-        }
-
-        /* Mobile */
-        @media (max-width: 500px) {
-            .gallery-section {
-                padding: 30px 10px;
-            }
-
-            .gallery-title h2 {
-                font-size: 23px;
-            }
-
-            .gallery {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
-
-            .pic {
-                height: 150px;
-                border-radius: 12px;
-                padding: 10px;
-            }
-
-            .pic-icon {
-                width: 48px;
-                height: 48px;
-                font-size: 23px;
-                margin-bottom: 9px;
-            }
-
-            .pic-title {
-                font-size: 14px;
-            }
-
-            .pic-subtitle {
-                font-size: 11px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- कार्य गैलरी Section -->
-    <section class="gallery-section">
-
-        <div class="gallery-title">
-            <h2>कार्य की फोटो गैलरी</h2>
-            <p>ग्राम पंचायत में किए गए विकास कार्यों की झलक</p>
-        </div>
-
-        <div class="gallery">
-
-            <!-- Before -->
-            <div class="pic">
-                <div class="pic-icon">📷</div>
-                <div class="pic-title">Before</div>
-                <div class="pic-subtitle">कार्य से पहले की फोटो</div>
-            </div>
-
-            <!-- After -->
-            <div class="pic">
-                <div class="pic-icon">📸</div>
-                <div class="pic-title">After</div>
-                <div class="pic-subtitle">कार्य के बाद की फोटो</div>
-            </div>
-
-            <!-- Work Progress -->
-            <div class="pic">
-                <div class="pic-icon">🚧</div>
-                <div class="pic-title">कार्य प्रगति</div>
-                <div class="pic-subtitle">निर्माण कार्य की फोटो</div>
-            </div>
-
-            <!-- Completed Work -->
-            <div class="pic">
-                <div class="pic-icon">✅</div>
-                <div class="pic-title">पूर्ण कार्य</div>
-                <div class="pic-subtitle">पूर्ण किए गए कार्य की फोटो</div>
-            </div>
+          <input
+            type="file"
+            id="beforeImage"
+            accept="image/*"
+            onchange="previewImage(event, 'beforePreview')"
+          >
 
         </div>
 
-    </section>
+      </div>
 
-</body>
-</html>
+      <div class="photo-card-footer">
+        <span class="status before-status">BEFORE</span>
+        <h3>काम शुरू होने से पहले</h3>
+      </div>
 
+    </div>
+
+
+
+    <!-- =================================================
+         AFTER
+    ================================================== -->
+
+    <div class="photo-upload-card after-card">
+
+      <div class="photo-preview" id="afterPreview">
+
+        <div class="upload-placeholder">
+
+          <div class="upload-icon">✨</div>
+
+          <h3>After Photo</h3>
+
+          <p>काम पूरा होने के बाद की फोटो</p>
+
+          <label for="afterImage" class="upload-button">
+            + फोटो अपलोड करें
+          </label>
+
+          <input
+            type="file"
+            id="afterImage"
+            accept="image/*"
+            onchange="previewImage(event, 'afterPreview')"
+          >
+
+        </div>
+
+      </div>
+
+      <div class="photo-card-footer">
+        <span class="status after-status">AFTER</span>
+        <h3>काम पूरा होने के बाद</h3>
+      </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         WORK PROGRESS
+    ================================================== -->
+
+    <div class="photo-upload-card progress-card">
+
+      <div class="photo-preview" id="progressPreview">
+
+        <div class="upload-placeholder">
+
+          <div class="upload-icon">🔨</div>
+
+          <h3>Work Progress</h3>
+
+          <p>कार्य प्रगति की फोटो</p>
+
+          <label for="progressImage" class="upload-button">
+            + फोटो अपलोड करें
+          </label>
+
+          <input
+            type="file"
+            id="progressImage"
+            accept="image/*"
+            onchange="previewImage(event, 'progressPreview')"
+          >
+
+        </div>
+
+      </div>
+
+      <div class="photo-card-footer">
+        <span class="status progress-status">WORK IN PROGRESS</span>
+        <h3>कार्य प्रगति पर</h3>
+      </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         COMPLETED
+    ================================================== -->
+
+    <div class="photo-upload-card completed-card">
+
+      <div class="photo-preview" id="completedPreview">
+
+        <div class="upload-placeholder">
+
+          <div class="upload-icon">🏆</div>
+
+          <h3>Completed Work</h3>
+
+          <p>पूरी तरह पूर्ण कार्य की फोटो</p>
+
+          <label for="completedImage" class="upload-button">
+            + फोटो अपलोड करें
+          </label>
+
+          <input
+            type="file"
+            id="completedImage"
+            accept="image/*"
+            onchange="previewImage(event, 'completedPreview')"
+          >
+
+        </div>
+
+      </div>
+
+      <div class="photo-card-footer">
+        <span class="status completed-status">COMPLETED</span>
+        <h3>पूर्ण कार्य</h3>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<style>
+
+/* =====================================================
+   MAIN SECTION
+===================================================== */
+
+.photo-gallery-section {
+  padding: 80px 20px;
+
+  background:
+    radial-gradient(
+      circle at 5% 5%,
+      #fff1d6 0,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 95% 95%,
+      #e5f5ff 0,
+      transparent 30%
+    ),
+    #f7f9fc;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.gallery-header {
+  max-width: 750px;
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.gallery-badge {
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  border-radius: 50px;
+
+  background: #fff1d6;
+
+  color: #e47b00;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 15px;
+}
+
+.gallery-header h2 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: clamp(30px, 5vw, 48px);
+
+  line-height: 1.2;
+}
+
+.gallery-header h2 span {
+  color: #ff7a00;
+}
+
+.gallery-header p {
+  margin-top: 15px;
+
+  color: #667085;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.photo-gallery-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 25px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.photo-upload-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 45px rgba(20,30,50,.10);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.photo-upload-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 25px 60px rgba(20,30,50,.18);
+}
+
+
+/* =====================================================
+   PHOTO PREVIEW
+===================================================== */
+
+.photo-preview {
+  position: relative;
+
+  height: 350px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef2f7,
+      #dfe5ec
+    );
+}
+
+
+/* =====================================================
+   UPLOAD PLACEHOLDER
+===================================================== */
+
+.upload-placeholder {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  text-align: center;
+
+  padding: 25px;
+}
+
+.upload-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  font-size: 30px;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
+  margin-bottom: 15px;
+}
+
+.upload-placeholder h3 {
+  margin: 0 0 6px;
+
+  color: #172033;
+
+  font-size: 22px;
+}
+
+.upload-placeholder p {
+  margin: 0 0 18px;
+
+  color: #667085;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   FILE INPUT
+===================================================== */
+
+.upload-placeholder input {
+  display: none;
+}
+
+
+/* =====================================================
+   UPLOAD BUTTON
+===================================================== */
+
+.upload-button {
+  display: inline-block;
+
+  padding: 11px 20px;
+
+  border-radius: 50px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff7a00,
+      #ff9f43
+    );
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 20px rgba(255,122,0,.25);
+
+  transition: all .25s ease;
+}
+
+.upload-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(255,122,0,.35);
+}
+
+
+/* =====================================================
+   IMAGE AFTER UPLOAD
+===================================================== */
+
+.photo-preview.uploaded {
+  background: #000;
+}
+
+.photo-preview.uploaded img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* =====================================================
+   CARD FOOTER
+===================================================== */
+
+.photo-card-footer {
+  padding: 20px 23px 23px;
+}
+
+.photo-card-footer h3 {
+  margin: 10px 0 0;
+
+  color: #172033;
+
+  font-size: 20px;
+}
+
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+
+.status {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  border-radius: 30px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.before-status {
+  background: #475467;
+}
+
+.after-status {
+  background:
+    linear-gradient(
+      135deg,
+      #00ad68,
+      #00d084
+    );
+}
+
+.progress-status {
+  background:
+    linear-gradient(
+      135deg,
+      #ff7a00,
+      #ff9f43
+    );
+}
+
+.completed-status {
+  background:
+    linear-gradient(
+      135deg,
+      #635bff,
+      #8b5cf6
+    );
+}
+
+
+/* =====================================================
+   COLOR TOP BORDER
+===================================================== */
+
+.before-card {
+  border-top: 4px solid #475467;
+}
+
+.after-card {
+  border-top: 4px solid #00c879;
+}
+
+.progress-card {
+  border-top: 4px solid #ff7a00;
+}
+
+.completed-card {
+  border-top: 4px solid #635bff;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .photo-gallery-section {
+    padding: 55px 15px;
+  }
+
+  .photo-gallery-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .photo-preview {
+    height: 320px;
+  }
+
+  .photo-upload-card {
+    border-radius: 20px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+  .photo-preview {
+    height: 290px;
+  }
+
+  .gallery-header h2 {
+    font-size: 30px;
+  }
+
+}
+
+</style>
+
+
+
+<script>
+
+/* =====================================================
+   PHOTO PREVIEW FUNCTION
+===================================================== */
+
+function previewImage(event, previewId) {
+
+  const file = event.target.files[0];
+
+  if (!file) {
+    return;
+  }
+
+  /* सिर्फ image files allow करें */
+
+  if (!file.type.startsWith("image/")) {
+
+    alert("कृपया केवल फोटो चुनें।");
+
+    return;
+  }
+
+
+  const reader = new FileReader();
+
+
+  reader.onload = function(e) {
+
+    const preview =
+      document.getElementById(previewId);
+
+
+    /* पुराना content हटाएँ */
+
+    preview.innerHTML = "";
+
+
+    /* uploaded class */
+
+    preview.classList.add("uploaded");
+
+
+    /* नई image बनाएँ */
+
+    const img =
+      document.createElement("img");
+
+
+    img.src = e.target.result;
+
+    img.alt = "Uploaded Photo";
+
+
+    /* image preview में लगाएँ */
+
+    preview.appendChild(img);
+
+  };
+
+
+  reader.readAsDataURL(file);
+
+}
+
+</script>
 
 </body>
 </html>
