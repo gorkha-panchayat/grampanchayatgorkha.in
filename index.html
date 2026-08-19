@@ -826,595 +826,1028 @@ footer{background:#092a19;color:#b9d1c2;text-align:center;padding:28px 20px;marg
 <!-- =====================================================
      PROFESSIONAL PHOTO GALLERY
 ===================================================== -->
+<!-- =========================================================
+     PROFESSIONAL PROJECT GALLERY
+     GRAM PANCHAYAT DEVELOPMENT WORKS
+========================================================= -->
 
-<section class="photo-gallery-section" id="photo-gallery">
+<section class="project-gallery" id="photo-gallery">
 
   <div class="gallery-header">
-    <div class="gallery-badge">📸 PROJECT GALLERY</div>
+
+    <div class="gallery-badge">
+      📸 DEVELOPMENT PROJECT GALLERY
+    </div>
 
     <h2>
-      हमारे काम की <span>शानदार झलक</span>
+      हमारे विकास कार्यों की
+      <span>झलक</span>
     </h2>
 
     <p>
-      Before से लेकर Final Result तक हमारे कार्यों की तस्वीरें देखें।
+      ग्राम पंचायत में किए गए विकास कार्यों की
+      Before, Progress और Completed तस्वीरें
+      एक ही जगह देखें।
     </p>
+
+  </div>
+
+
+  <!-- CATEGORY FILTER -->
+
+  <div class="gallery-filter">
+
+    <button class="filter-btn active"
+            onclick="filterProjects('all',this)">
+      सभी कार्य
+    </button>
+
+    <button class="filter-btn"
+            onclick="filterProjects('road',this)">
+      🛣️ सड़क एवं नाली
+    </button>
+
+    <button class="filter-btn"
+            onclick="filterProjects('water',this)">
+      💧 जल एवं स्वच्छता
+    </button>
+
+    <button class="filter-btn"
+            onclick="filterProjects('light',this)">
+      💡 प्रकाश व्यवस्था
+    </button>
+
+    <button class="filter-btn"
+            onclick="filterProjects('building',this)">
+      🏛️ भवन एवं सार्वजनिक स्थल
+    </button>
+
+    <button class="filter-btn"
+            onclick="filterProjects('education',this)">
+      🏫 शिक्षा एवं आंगनवाड़ी
+    </button>
+
+    <button class="filter-btn"
+            onclick="filterProjects('environment',this)">
+      🌱 हरियाली एवं पर्यावरण
+    </button>
+
   </div>
 
 
-  <div class="photo-gallery-grid">
+  <!-- PROJECTS -->
+
+  <div class="gallery-project-grid">
 
 
-    <!-- =================================================
-         BEFORE
-    ================================================== -->
+    <!-- =====================================================
+         PROJECT 1
+    ====================================================== -->
 
-    <div class="photo-upload-card before-card">
+    <article class="gallery-project"
+             data-category="road">
 
-      <div class="photo-preview" id="beforePreview">
+      <div class="gallery-project-image">
 
-        <div class="upload-placeholder">
+        <img
+          src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80"
+          alt="सड़क विकास कार्य">
 
-          <div class="upload-icon">📷</div>
+        <span class="gallery-completed">
+          ✓ पूर्ण कार्य
+        </span>
 
-          <h3>Before Photo</h3>
+        <button
+          class="gallery-view"
+          onclick="openGalleryImage(this)">
+          View Photo
+        </button>
 
-          <p>काम शुरू होने से पहले की फोटो</p>
+      </div>
 
-          <label for="beforeImage" class="upload-button">
-            + फोटो अपलोड करें
-          </label>
 
-          <input
-            type="file"
-            id="beforeImage"
-            accept="image/*"
-            onchange="previewImage(event, 'beforePreview')"
-          >
+      <div class="gallery-project-content">
+
+        <span class="gallery-category">
+          🛣️ सड़क एवं नाली
+        </span>
+
+        <h3>
+          सड़क निर्माण एवं सुधार कार्य
+        </h3>
+
+        <p>
+          ग्राम पंचायत क्षेत्र में सड़क एवं आवागमन
+          सुविधा को बेहतर बनाने के लिए किया गया कार्य।
+        </p>
+
+        <div class="gallery-meta">
+
+          <span>
+            📍 वार्ड / मोहल्ला
+          </span>
+
+          <span>
+            📅 2026–27
+          </span>
 
         </div>
 
       </div>
 
-      <div class="photo-card-footer">
-        <span class="status before-status">BEFORE</span>
-        <h3>काम शुरू होने से पहले</h3>
+    </article>
+
+
+
+    <!-- =====================================================
+         PROJECT 2
+    ====================================================== -->
+
+    <article class="gallery-project"
+             data-category="water">
+
+      <div class="gallery-project-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80"
+          alt="जल एवं स्वच्छता कार्य">
+
+        <span class="gallery-completed">
+          ✓ पूर्ण कार्य
+        </span>
+
+        <button
+          class="gallery-view"
+          onclick="openGalleryImage(this)">
+          View Photo
+        </button>
+
       </div>
 
-    </div>
 
+      <div class="gallery-project-content">
 
+        <span class="gallery-category">
+          💧 जल एवं स्वच्छता
+        </span>
 
-    <!-- =================================================
-         AFTER
-    ================================================== -->
+        <h3>
+          जल व्यवस्था एवं स्वच्छता कार्य
+        </h3>
 
-    <div class="photo-upload-card after-card">
+        <p>
+          ग्रामवासियों के लिए बेहतर जल सुविधा और
+          स्वच्छ वातावरण उपलब्ध कराने से संबंधित कार्य।
+        </p>
 
-      <div class="photo-preview" id="afterPreview">
+        <div class="gallery-meta">
 
-        <div class="upload-placeholder">
+          <span>
+            📍 पंचायत क्षेत्र
+          </span>
 
-          <div class="upload-icon">✨</div>
-
-          <h3>After Photo</h3>
-
-          <p>काम पूरा होने के बाद की फोटो</p>
-
-          <label for="afterImage" class="upload-button">
-            + फोटो अपलोड करें
-          </label>
-
-          <input
-            type="file"
-            id="afterImage"
-            accept="image/*"
-            onchange="previewImage(event, 'afterPreview')"
-          >
+          <span>
+            📅 2026–27
+          </span>
 
         </div>
 
       </div>
 
-      <div class="photo-card-footer">
-        <span class="status after-status">AFTER</span>
-        <h3>काम पूरा होने के बाद</h3>
+    </article>
+
+
+
+    <!-- =====================================================
+         PROJECT 3
+    ====================================================== -->
+
+    <article class="gallery-project"
+             data-category="light">
+
+      <div class="gallery-project-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80"
+          alt="स्ट्रीट लाइट कार्य">
+
+        <span class="gallery-progress">
+          ⏳ प्रगति पर
+        </span>
+
+        <button
+          class="gallery-view"
+          onclick="openGalleryImage(this)">
+          View Photo
+        </button>
+
       </div>
 
-    </div>
 
+      <div class="gallery-project-content">
 
+        <span class="gallery-category">
+          💡 प्रकाश व्यवस्था
+        </span>
 
-    <!-- =================================================
-         WORK PROGRESS
-    ================================================== -->
+        <h3>
+          स्ट्रीट लाइट स्थापना कार्य
+        </h3>
 
-    <div class="photo-upload-card progress-card">
+        <p>
+          ग्राम की सार्वजनिक सड़कों और आवश्यक स्थानों
+          पर प्रकाश व्यवस्था को बेहतर बनाने का कार्य।
+        </p>
 
-      <div class="photo-preview" id="progressPreview">
+        <div class="gallery-meta">
 
-        <div class="upload-placeholder">
+          <span>
+            📍 वार्ड / मोहल्ला
+          </span>
 
-          <div class="upload-icon">🔨</div>
-
-          <h3>Work Progress</h3>
-
-          <p>कार्य प्रगति की फोटो</p>
-
-          <label for="progressImage" class="upload-button">
-            + फोटो अपलोड करें
-          </label>
-
-          <input
-            type="file"
-            id="progressImage"
-            accept="image/*"
-            onchange="previewImage(event, 'progressPreview')"
-          >
+          <span>
+            📅 2026–27
+          </span>
 
         </div>
 
       </div>
 
-      <div class="photo-card-footer">
-        <span class="status progress-status">WORK IN PROGRESS</span>
-        <h3>कार्य प्रगति पर</h3>
+    </article>
+
+
+
+    <!-- =====================================================
+         PROJECT 4
+    ====================================================== -->
+
+    <article class="gallery-project"
+             data-category="building">
+
+      <div class="gallery-project-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+          alt="सार्वजनिक भवन">
+
+        <span class="gallery-completed">
+          ✓ पूर्ण कार्य
+        </span>
+
+        <button
+          class="gallery-view"
+          onclick="openGalleryImage(this)">
+          View Photo
+        </button>
+
       </div>
 
-    </div>
 
+      <div class="gallery-project-content">
 
+        <span class="gallery-category">
+          🏛️ भवन एवं सार्वजनिक स्थल
+        </span>
 
-    <!-- =================================================
-         COMPLETED
-    ================================================== -->
+        <h3>
+          सार्वजनिक भवन विकास कार्य
+        </h3>
 
-    <div class="photo-upload-card completed-card">
+        <p>
+          पंचायत क्षेत्र में सार्वजनिक उपयोग के लिए
+          भवन एवं परिसर का विकास कार्य।
+        </p>
 
-      <div class="photo-preview" id="completedPreview">
+        <div class="gallery-meta">
 
-        <div class="upload-placeholder">
+          <span>
+            📍 पंचायत क्षेत्र
+          </span>
 
-          <div class="upload-icon">🏆</div>
-
-          <h3>Completed Work</h3>
-
-          <p>पूरी तरह पूर्ण कार्य की फोटो</p>
-
-          <label for="completedImage" class="upload-button">
-            + फोटो अपलोड करें
-          </label>
-
-          <input
-            type="file"
-            id="completedImage"
-            accept="image/*"
-            onchange="previewImage(event, 'completedPreview')"
-          >
+          <span>
+            📅 2026–27
+          </span>
 
         </div>
 
       </div>
 
-      <div class="photo-card-footer">
-        <span class="status completed-status">COMPLETED</span>
-        <h3>पूर्ण कार्य</h3>
+    </article>
+
+
+
+    <!-- =====================================================
+         PROJECT 5
+    ====================================================== -->
+
+    <article class="gallery-project"
+             data-category="education">
+
+      <div class="gallery-project-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"
+          alt="शिक्षा एवं आंगनवाड़ी">
+
+        <span class="gallery-completed">
+          ✓ पूर्ण कार्य
+        </span>
+
+        <button
+          class="gallery-view"
+          onclick="openGalleryImage(this)">
+          View Photo
+        </button>
+
       </div>
 
-    </div>
+
+      <div class="gallery-project-content">
+
+        <span class="gallery-category">
+          🏫 शिक्षा एवं आंगनवाड़ी
+        </span>
+
+        <h3>
+          विद्यालय एवं आंगनवाड़ी विकास
+        </h3>
+
+        <p>
+          बच्चों के लिए बेहतर शैक्षणिक एवं
+          सार्वजनिक सुविधाओं से संबंधित विकास कार्य।
+        </p>
+
+        <div class="gallery-meta">
+
+          <span>
+            📍 पंचायत क्षेत्र
+          </span>
+
+          <span>
+            📅 2026–27
+          </span>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- =====================================================
+         PROJECT 6
+    ====================================================== -->
+
+    <article class="gallery-project"
+             data-category="environment">
+
+      <div class="gallery-project-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1200&q=80"
+          alt="हरियाली एवं पर्यावरण">
+
+        <span class="gallery-completed">
+          ✓ पूर्ण कार्य
+        </span>
+
+        <button
+          class="gallery-view"
+          onclick="openGalleryImage(this)">
+          View Photo
+        </button>
+
+      </div>
+
+
+      <div class="gallery-project-content">
+
+        <span class="gallery-category">
+          🌱 हरियाली एवं पर्यावरण
+        </span>
+
+        <h3>
+          पौधारोपण एवं हरित क्षेत्र विकास
+        </h3>
+
+        <p>
+          पंचायत क्षेत्र को स्वच्छ एवं हरा-भरा बनाने
+          के लिए किए गए पौधारोपण और पर्यावरण कार्य।
+        </p>
+
+        <div class="gallery-meta">
+
+          <span>
+            📍 पंचायत क्षेत्र
+          </span>
+
+          <span>
+            📅 2026–27
+          </span>
+
+        </div>
+
+      </div>
+
+    </article>
 
   </div>
+
+
+  <!-- EMPTY MESSAGE -->
+
+  <div id="galleryEmpty"
+       class="gallery-empty"
+       style="display:none">
+
+    <div>📂</div>
+
+    <h3>
+      इस श्रेणी में अभी कोई कार्य नहीं है
+    </h3>
+
+    <p>
+      नए विकास कार्य जुड़ने के बाद यहाँ दिखाई देंगे।
+    </p>
+
+  </div>
+
 
 </section>
 
 
 
+<!-- =========================================================
+     IMAGE LIGHTBOX
+========================================================= -->
+
+<div
+  id="galleryLightbox"
+  class="gallery-lightbox"
+  onclick="closeGalleryImage(event)">
+
+  <button
+    class="lightbox-close"
+    onclick="closeGalleryImage()">
+    ×
+  </button>
+
+  <img
+    id="lightboxImage"
+    src=""
+    alt="Project Photo">
+
+</div>
+
+
+
+<!-- =========================================================
+     PROJECT GALLERY CSS
+========================================================= -->
+
 <style>
 
-/* =====================================================
-   MAIN SECTION
-===================================================== */
+.project-gallery{
 
-.photo-gallery-section {
-  padding: 80px 20px;
+  padding:85px 20px;
 
   background:
+
     radial-gradient(
-      circle at 5% 5%,
-      #fff1d6 0,
+      circle at 0% 0%,
+      #eaf7ee 0,
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 100% 100%,
+      #eef5ff 0,
       transparent 30%
     ),
-    radial-gradient(
-      circle at 95% 95%,
-      #e5f5ff 0,
-      transparent 30%
-    ),
-    #f7f9fc;
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+    #f8faf9;
 }
 
 
-/* =====================================================
-   HEADER
-===================================================== */
+.gallery-header{
 
-.gallery-header {
-  max-width: 750px;
-  margin: 0 auto 45px;
+  max-width:760px;
 
-  text-align: center;
-}
+  margin:
+  0 auto 38px;
 
-.gallery-badge {
-  display: inline-block;
-
-  padding: 8px 18px;
-
-  border-radius: 50px;
-
-  background: #fff1d6;
-
-  color: #e47b00;
-
-  font-size: 12px;
-
-  font-weight: 800;
-
-  letter-spacing: 1.5px;
-
-  margin-bottom: 15px;
-}
-
-.gallery-header h2 {
-  margin: 0;
-
-  color: #172033;
-
-  font-size: clamp(30px, 5vw, 48px);
-
-  line-height: 1.2;
-}
-
-.gallery-header h2 span {
-  color: #ff7a00;
-}
-
-.gallery-header p {
-  margin-top: 15px;
-
-  color: #667085;
-
-  font-size: 16px;
-
-  line-height: 1.7;
+  text-align:center;
 }
 
 
-/* =====================================================
-   GRID
-===================================================== */
+.gallery-badge{
 
-.photo-gallery-grid {
-  max-width: 1200px;
+  display:inline-block;
 
-  margin: auto;
+  padding:
+  8px 17px;
 
-  display: grid;
+  border-radius:30px;
 
-  grid-template-columns: 1fr 1fr;
+  background:#e7f6eb;
 
-  gap: 25px;
+  color:#146b3a;
+
+  font-size:11px;
+
+  font-weight:900;
+
+  letter-spacing:1.5px;
+
+  margin-bottom:14px;
 }
 
 
-/* =====================================================
-   CARD
-===================================================== */
+.gallery-header h2{
 
-.photo-upload-card {
-  overflow: hidden;
+  margin:0;
 
-  background: #ffffff;
+  color:#17221b;
 
-  border-radius: 24px;
+  font-size:
+  clamp(30px,5vw,46px);
+
+  line-height:1.2;
+}
+
+
+.gallery-header h2 span{
+
+  color:#146b3a;
+}
+
+
+.gallery-header p{
+
+  max-width:650px;
+
+  margin:
+  14px auto 0;
+
+  color:#657269;
+
+  font-size:15px;
+
+  line-height:1.7;
+}
+
+
+
+/* FILTER */
+
+.gallery-filter{
+
+  max-width:1200px;
+
+  margin:
+  0 auto 35px;
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:8px;
+}
+
+
+.filter-btn{
+
+  border:
+  1px solid #d7e1da;
+
+  background:#fff;
+
+  color:#405247;
+
+  padding:
+  9px 15px;
+
+  border-radius:30px;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+
+.filter-btn:hover{
+
+  border-color:#146b3a;
+
+  color:#146b3a;
+}
+
+
+.filter-btn.active{
+
+  background:#146b3a;
+
+  border-color:#146b3a;
+
+  color:#fff;
 
   box-shadow:
-    0 15px 45px rgba(20,30,50,.10);
+  0 5px 15px
+  rgba(20,107,58,.18);
+}
+
+
+
+/* PROJECT GRID */
+
+.gallery-project-grid{
+
+  max-width:1200px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:22px;
+}
+
+
+
+/* CARD */
+
+.gallery-project{
+
+  background:#fff;
+
+  border:
+  1px solid #e1e9e3;
+
+  border-radius:18px;
+
+  overflow:hidden;
+
+  box-shadow:
+  0 10px 30px
+  rgba(18,55,34,.08);
 
   transition:
-    transform .3s ease,
-    box-shadow .3s ease;
+  transform .25s ease,
+  box-shadow .25s ease;
 }
 
-.photo-upload-card:hover {
-  transform: translateY(-7px);
+
+.gallery-project:hover{
+
+  transform:
+  translateY(-5px);
 
   box-shadow:
-    0 25px 60px rgba(20,30,50,.18);
+  0 18px 40px
+  rgba(18,55,34,.14);
 }
 
 
-/* =====================================================
-   PHOTO PREVIEW
-===================================================== */
 
-.photo-preview {
-  position: relative;
+/* IMAGE */
 
-  height: 350px;
+.gallery-project-image{
 
-  overflow: hidden;
+  height:230px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:#e8eee9;
+}
+
+
+.gallery-project-image img{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:
+  transform .4s ease;
+}
+
+
+.gallery-project:hover
+.gallery-project-image img{
+
+  transform:scale(1.05);
+}
+
+
+
+/* STATUS */
+
+.gallery-completed,
+.gallery-progress{
+
+  position:absolute;
+
+  top:13px;
+
+  left:13px;
+
+  padding:
+  6px 10px;
+
+  border-radius:20px;
+
+  color:#fff;
+
+  font-size:10px;
+
+  font-weight:800;
+
+  backdrop-filter:blur(5px);
+}
+
+
+.gallery-completed{
+
+  background:#146b3a;
+}
+
+
+.gallery-progress{
+
+  background:#a85d00;
+}
+
+
+
+/* VIEW BUTTON */
+
+.gallery-view{
+
+  position:absolute;
+
+  right:13px;
+
+  bottom:13px;
+
+  border:0;
+
+  padding:
+  8px 13px;
+
+  border-radius:20px;
 
   background:
-    linear-gradient(
-      135deg,
-      #eef2f7,
-      #dfe5ec
-    );
+  rgba(0,0,0,.68);
+
+  color:#fff;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  cursor:pointer;
 }
 
 
-/* =====================================================
-   UPLOAD PLACEHOLDER
-===================================================== */
+.gallery-view:hover{
 
-.upload-placeholder {
-  position: absolute;
-
-  inset: 0;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  flex-direction: column;
-
-  text-align: center;
-
-  padding: 25px;
+  background:#146b3a;
 }
 
-.upload-icon {
-  width: 70px;
-  height: 70px;
 
-  display: flex;
 
-  align-items: center;
-  justify-content: center;
+/* CONTENT */
 
-  border-radius: 50%;
+.gallery-project-content{
 
-  background: #ffffff;
+  padding:20px;
+}
 
-  font-size: 30px;
+
+.gallery-category{
+
+  display:inline-block;
+
+  color:#146b3a;
+
+  background:#eef8f1;
+
+  padding:
+  5px 9px;
+
+  border-radius:20px;
+
+  font-size:10px;
+
+  font-weight:800;
+}
+
+
+.gallery-project-content h3{
+
+  color:#17221b;
+
+  font-size:18px;
+
+  margin:
+  12px 0 7px;
+}
+
+
+.gallery-project-content p{
+
+  color:#657269;
+
+  font-size:13px;
+
+  line-height:1.6;
+
+  margin:0 0 15px;
+}
+
+
+.gallery-meta{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:10px;
+
+  padding-top:13px;
+
+  border-top:
+  1px solid #e7ece9;
+
+  color:#68776e;
+
+  font-size:11px;
+
+  font-weight:700;
+}
+
+
+
+/* EMPTY */
+
+.gallery-empty{
+
+  max-width:500px;
+
+  margin:40px auto;
+
+  text-align:center;
+
+  padding:40px 20px;
+
+  background:#fff;
+
+  border:
+  1px solid #e1e9e3;
+
+  border-radius:16px;
+}
+
+
+.gallery-empty div{
+
+  font-size:40px;
+}
+
+
+.gallery-empty h3{
+
+  margin:
+  10px 0 5px;
+
+  color:#20362a;
+}
+
+
+.gallery-empty p{
+
+  color:#657269;
+
+  font-size:13px;
+}
+
+
+
+/* LIGHTBOX */
+
+.gallery-lightbox{
+
+  display:none;
+
+  position:fixed;
+
+  inset:0;
+
+  z-index:99999;
+
+  background:
+  rgba(5,15,9,.92);
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:30px;
+}
+
+
+.gallery-lightbox img{
+
+  max-width:95%;
+
+  max-height:90vh;
+
+  object-fit:contain;
+
+  border-radius:10px;
 
   box-shadow:
-    0 8px 25px rgba(0,0,0,.08);
-
-  margin-bottom: 15px;
-}
-
-.upload-placeholder h3 {
-  margin: 0 0 6px;
-
-  color: #172033;
-
-  font-size: 22px;
-}
-
-.upload-placeholder p {
-  margin: 0 0 18px;
-
-  color: #667085;
-
-  font-size: 13px;
+  0 20px 80px #000;
 }
 
 
-/* =====================================================
-   FILE INPUT
-===================================================== */
+.lightbox-close{
 
-.upload-placeholder input {
-  display: none;
+  position:absolute;
+
+  right:25px;
+
+  top:15px;
+
+  border:0;
+
+  background:none;
+
+  color:#fff;
+
+  font-size:45px;
+
+  cursor:pointer;
 }
 
 
-/* =====================================================
-   UPLOAD BUTTON
-===================================================== */
 
-.upload-button {
-  display: inline-block;
+/* MOBILE */
 
-  padding: 11px 20px;
+@media(max-width:1000px){
 
-  border-radius: 50px;
+  .gallery-project-grid{
 
-  background:
-    linear-gradient(
-      135deg,
-      #ff7a00,
-      #ff9f43
-    );
-
-  color: #ffffff;
-
-  font-size: 13px;
-
-  font-weight: 700;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 7px 20px rgba(255,122,0,.25);
-
-  transition: all .25s ease;
-}
-
-.upload-button:hover {
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 10px 25px rgba(255,122,0,.35);
-}
-
-
-/* =====================================================
-   IMAGE AFTER UPLOAD
-===================================================== */
-
-.photo-preview.uploaded {
-  background: #000;
-}
-
-.photo-preview.uploaded img {
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
-}
-
-
-/* =====================================================
-   CARD FOOTER
-===================================================== */
-
-.photo-card-footer {
-  padding: 20px 23px 23px;
-}
-
-.photo-card-footer h3 {
-  margin: 10px 0 0;
-
-  color: #172033;
-
-  font-size: 20px;
-}
-
-
-/* =====================================================
-   STATUS BADGES
-===================================================== */
-
-.status {
-  display: inline-block;
-
-  padding: 6px 12px;
-
-  border-radius: 30px;
-
-  color: #ffffff;
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 1px;
-}
-
-.before-status {
-  background: #475467;
-}
-
-.after-status {
-  background:
-    linear-gradient(
-      135deg,
-      #00ad68,
-      #00d084
-    );
-}
-
-.progress-status {
-  background:
-    linear-gradient(
-      135deg,
-      #ff7a00,
-      #ff9f43
-    );
-}
-
-.completed-status {
-  background:
-    linear-gradient(
-      135deg,
-      #635bff,
-      #8b5cf6
-    );
-}
-
-
-/* =====================================================
-   COLOR TOP BORDER
-===================================================== */
-
-.before-card {
-  border-top: 4px solid #475467;
-}
-
-.after-card {
-  border-top: 4px solid #00c879;
-}
-
-.progress-card {
-  border-top: 4px solid #ff7a00;
-}
-
-.completed-card {
-  border-top: 4px solid #635bff;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 768px) {
-
-  .photo-gallery-section {
-    padding: 55px 15px;
-  }
-
-  .photo-gallery-grid {
-    grid-template-columns: 1fr;
-
-    gap: 18px;
-  }
-
-  .photo-preview {
-    height: 320px;
-  }
-
-  .photo-upload-card {
-    border-radius: 20px;
+    grid-template-columns:
+    repeat(2,1fr);
   }
 
 }
 
 
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
+@media(max-width:650px){
 
-@media (max-width: 450px) {
+  .project-gallery{
 
-  .photo-preview {
-    height: 290px;
+    padding:
+    60px 15px;
   }
 
-  .gallery-header h2 {
-    font-size: 30px;
+  .gallery-project-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .gallery-project-image{
+
+    height:220px;
+  }
+
+  .gallery-filter{
+
+    justify-content:flex-start;
+  }
+
+  .gallery-meta{
+
+    flex-direction:column;
+
+    gap:5px;
   }
 
 }
@@ -1423,70 +1856,163 @@ footer{background:#092a19;color:#b9d1c2;text-align:center;padding:28px 20px;marg
 
 
 
+<!-- =========================================================
+     PROJECT GALLERY JAVASCRIPT
+========================================================= -->
+
 <script>
 
-/* =====================================================
-   PHOTO PREVIEW FUNCTION
-===================================================== */
+function filterProjects(category, button){
 
-function previewImage(event, previewId) {
+  const projects =
+    document.querySelectorAll(
+      ".gallery-project"
+    );
 
-  const file = event.target.files[0];
+  const buttons =
+    document.querySelectorAll(
+      ".filter-btn"
+    );
 
-  if (!file) {
-    return;
+  let visible = 0;
+
+
+  buttons.forEach(function(btn){
+
+    btn.classList.remove("active");
+
+  });
+
+
+  button.classList.add("active");
+
+
+  projects.forEach(function(project){
+
+    const projectCategory =
+      project.getAttribute(
+        "data-category"
+      );
+
+
+    if(
+      category === "all" ||
+      projectCategory === category
+    ){
+
+      project.style.display =
+        "block";
+
+      visible++;
+
+    }
+
+    else{
+
+      project.style.display =
+        "none";
+
+    }
+
+  });
+
+
+  const empty =
+    document.getElementById(
+      "galleryEmpty"
+    );
+
+
+  if(empty){
+
+    empty.style.display =
+      visible === 0
+      ? "block"
+      : "none";
+
   }
-
-  /* सिर्फ image files allow करें */
-
-  if (!file.type.startsWith("image/")) {
-
-    alert("कृपया केवल फोटो चुनें।");
-
-    return;
-  }
-
-
-  const reader = new FileReader();
-
-
-  reader.onload = function(e) {
-
-    const preview =
-      document.getElementById(previewId);
-
-
-    /* पुराना content हटाएँ */
-
-    preview.innerHTML = "";
-
-
-    /* uploaded class */
-
-    preview.classList.add("uploaded");
-
-
-    /* नई image बनाएँ */
-
-    const img =
-      document.createElement("img");
-
-
-    img.src = e.target.result;
-
-    img.alt = "Uploaded Photo";
-
-
-    /* image preview में लगाएँ */
-
-    preview.appendChild(img);
-
-  };
-
-
-  reader.readAsDataURL(file);
 
 }
+
+
+
+function openGalleryImage(button){
+
+  const card =
+    button.closest(
+      ".gallery-project"
+    );
+
+
+  const image =
+    card.querySelector(
+      ".gallery-project-image img"
+    );
+
+
+  if(!image) return;
+
+
+  const lightbox =
+    document.getElementById(
+      "galleryLightbox"
+    );
+
+
+  const lightboxImage =
+    document.getElementById(
+      "lightboxImage"
+    );
+
+
+  lightboxImage.src =
+    image.src;
+
+
+  lightbox.style.display =
+    "flex";
+
+}
+
+
+
+function closeGalleryImage(event){
+
+  if(
+    event &&
+    event.target &&
+    event.target.id !==
+    "galleryLightbox"
+  ){
+
+    return;
+
+  }
+
+
+  document.getElementById(
+    "galleryLightbox"
+  ).style.display =
+    "none";
+
+}
+
+
+document.addEventListener(
+  "keydown",
+  function(event){
+
+    if(event.key === "Escape"){
+
+      document.getElementById(
+        "galleryLightbox"
+      ).style.display =
+        "none";
+
+    }
+
+  }
+);
 
 </script>
 
