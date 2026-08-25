@@ -54,34 +54,29 @@ footer{background:#092a19;color:#b9d1c2;text-align:center;padding:28px 20px;marg
 <div class="stat"><div class="icon">📢</div><strong>0</strong><span>नई सूचनाएँ</span></div>
 </div>
 
-<!-- ================= IMPORTANT NOTICE ================= -->
+<!-- ================= महत्वपूर्ण सूचना ================= -->
 
-<section id="important-notices" class="important-notice-section">
+<section id="important-notice" class="important-notice">
 
-  <div class="important-notice-box">
+  <div class="important-notice-bar">
 
     <div class="important-notice-title">
       🔴 महत्वपूर्ण सूचना
     </div>
 
-    <div class="notice-ticker-wrap">
-      <div id="noticeTicker" class="notice-ticker">
+    <div class="important-notice-scroll">
+      <div id="importantNoticeText">
 
-        <span class="notice-empty">
+        <span class="notice-item">
           अभी कोई महत्वपूर्ण सूचना उपलब्ध नहीं है।
         </span>
 
       </div>
     </div>
 
-    <div class="notice-actions">
-
-      <button class="notice-add-btn"
-              onclick="addNotice()">
-        🔗 सूचना / लिंक जोड़ें
-      </button>
-
-    </div>
+    <button class="notice-add-btn" onclick="addNotice()">
+      + लिंक जोड़ें
+    </button>
 
   </div>
 
@@ -90,82 +85,102 @@ footer{background:#092a19;color:#b9d1c2;text-align:center;padding:28px 20px;marg
 
 <style>
 
-.important-notice-section{
-  padding:25px 0 10px;
+/* मुख्य Notice Bar */
+
+.important-notice{
+  width:100%;
+  margin:18px 0 10px;
 }
 
-.important-notice-box{
-  background:#fff;
-  border:2px solid #dc2626;
-  border-radius:14px;
+.important-notice-bar{
+  height:46px;
+  display:flex;
+  align-items:center;
+  background:#ffffff;
+  border:1px solid #ddd;
+  border-left:5px solid #dc2626;
+  border-radius:6px;
   overflow:hidden;
-  box-shadow:0 8px 25px rgba(220,38,38,.12);
+  box-shadow:0 3px 10px rgba(0,0,0,.08);
 }
+
+
+/* लाल महत्वपूर्ण सूचना */
 
 .important-notice-title{
+  height:100%;
+  display:flex;
+  align-items:center;
+  padding:0 14px;
   background:#dc2626;
-  color:white;
-  padding:10px 16px;
-  font-size:15px;
+  color:#ffffff;
+  font-size:13px;
   font-weight:900;
+  white-space:nowrap;
   animation:noticeBlink 1.2s infinite;
 }
 
-.notice-ticker-wrap{
+
+/* चलने वाली लाइन */
+
+.important-notice-scroll{
+  flex:1;
   overflow:hidden;
-  background:#fff7f7;
-  min-height:50px;
-  display:flex;
-  align-items:center;
-}
-
-.notice-ticker{
-  display:flex;
-  gap:70px;
   white-space:nowrap;
-  padding:13px 0;
-  animation:noticeMove 25s linear infinite;
 }
 
-.notice-ticker:hover{
-  animation-play-state:paused;
+#importantNoticeText{
+  display:inline-block;
+  padding-left:100%;
+  animation:noticeMove 22s linear infinite;
 }
 
 .notice-item{
   color:#b91c1c;
-  font-size:14px;
+  font-size:13px;
   font-weight:800;
+  margin-right:80px;
 }
 
 .notice-item a{
-  color:#991b1b;
-  margin-left:10px;
+  color:#146b3a;
+  font-weight:900;
+  margin-left:8px;
   text-decoration:underline;
 }
 
-.notice-empty{
-  color:#777;
-  padding-left:18px;
-  font-size:13px;
-}
 
-.notice-actions{
-  padding:10px 14px;
-  border-top:1px solid #fee2e2;
-}
+/* Link जोड़ने का button */
 
 .notice-add-btn{
+  margin-right:7px;
   border:0;
   background:#146b3a;
   color:white;
-  padding:9px 15px;
-  border-radius:8px;
+  padding:7px 10px;
+  border-radius:5px;
+  font-size:11px;
   font-weight:800;
   cursor:pointer;
 }
 
 .notice-add-btn:hover{
   background:#0d3b24;
+}
+
+
+/* Animation */
+
+@keyframes noticeMove{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-100%);
+  }
+
 }
 
 @keyframes noticeBlink{
@@ -175,27 +190,32 @@ footer{background:#092a19;color:#b9d1c2;text-align:center;padding:28px 20px;marg
   }
 
   50%{
-    opacity:.65;
+    opacity:.55;
   }
 
 }
 
-@keyframes noticeMove{
 
-  from{
-    transform:translateX(100%);
-  }
-
-  to{
-    transform:translateX(-100%);
-  }
-
-}
+/* Mobile */
 
 @media(max-width:600px){
 
+  .important-notice-bar{
+    height:44px;
+  }
+
+  .important-notice-title{
+    padding:0 8px;
+    font-size:10px;
+  }
+
+  .notice-item{
+    font-size:11px;
+  }
+
   .notice-add-btn{
-    width:100%;
+    padding:6px 7px;
+    font-size:9px;
   }
 
 }
@@ -205,137 +225,36 @@ footer{background:#092a19;color:#b9d1c2;text-align:center;padding:28px 20px;marg
 
 <script>
 
-function getNotices(){
-
-  try{
-
-    return JSON.parse(
-      localStorage.getItem("gorkha_notices") || "[]"
-    );
-
-  }catch(e){
-
-    return [];
-
-  }
-
-}
-
-
-function saveNotices(notices){
-
-  localStorage.setItem(
-    "gorkha_notices",
-    JSON.stringify(notices)
-  );
-
-}
-
-
-function renderNotices(){
-
-  const box =
-    document.getElementById("noticeTicker");
-
-  if(!box) return;
-
-  const notices = getNotices();
-
-  if(notices.length === 0){
-
-    box.innerHTML =
-      '<span class="notice-empty">' +
-      'अभी कोई महत्वपूर्ण सूचना उपलब्ध नहीं है।' +
-      '</span>';
-
-    return;
-
-  }
-
-  box.innerHTML = notices.map(function(notice){
-
-    return `
-      <span class="notice-item">
-        🔴 ${escapeNotice(notice.title)}
-
-        <a href="${safeNoticeUrl(notice.url)}"
-           target="_blank"
-           rel="noopener noreferrer">
-
-           सूचना देखें ↗
-
-        </a>
-      </span>
-    `;
-
-  }).join("");
-
-}
-
-
-function escapeNotice(text){
-
-  return String(text).replace(
-    /[&<>"']/g,
-    function(m){
-
-      return {
-        "&":"&amp;",
-        "<":"&lt;",
-        ">":"&gt;",
-        '"':"&quot;",
-        "'":"&#039;"
-
-      }[m];
-
-    }
-  );
-
-}
-
-
-function safeNoticeUrl(url){
-
-  try{
-
-    const u = new URL(url);
-
-    if(
-      u.protocol === "http:" ||
-      u.protocol === "https:"
-    ){
-
-      return u.href;
-
-    }
-
-  }catch(e){}
-
-  return "#";
-
-}
+const NOTICE_STORAGE_KEY = "gorkhaImportantNotice";
 
 
 function addNotice(){
 
   const title = prompt(
-    "सूचना का शीर्षक लिखें:"
+    "महत्वपूर्ण सूचना का नाम लिखें:"
   );
 
-  if(!title) return;
+  if(!title){
+    return;
+  }
 
 
-  const url = prompt(
-    "सूचना का पूरा लिंक डालें:\n\nउदाहरण:\nhttps://example.com"
+  const link = prompt(
+    "सूचना का लिंक डालें:\n\nउदाहरण:\nhttps://www.sarkariresult.com/"
   );
 
-  if(!url) return;
+  if(!link){
+    return;
+  }
 
 
-  if(!/^https?:\/\//i.test(url)){
+  if(
+    !link.startsWith("http://") &&
+    !link.startsWith("https://")
+  ){
 
     alert(
-      "कृपया सही लिंक डालें जो https:// या http:// से शुरू हो।"
+      "कृपया सही लिंक डालें जो https:// से शुरू हो।"
     );
 
     return;
@@ -343,38 +262,102 @@ function addNotice(){
   }
 
 
-  const notices = getNotices();
+  localStorage.setItem(
+
+    NOTICE_STORAGE_KEY,
+
+    JSON.stringify({
+
+      title:title,
+
+      link:link
+
+    })
+
+  );
 
 
-  notices.push({
-
-    title:title.trim(),
-
-    url:url.trim(),
-
-    date:new Date().toLocaleDateString("hi-IN")
-
-  });
+  showNotice();
 
 
-  saveNotices(notices);
+  alert("✅ महत्वपूर्ण सूचना जोड़ दी गई है।");
 
-  renderNotices();
+}
 
 
-  alert("✅ सूचना सफलतापूर्वक जोड़ दी गई है।");
+function showNotice(){
+
+  const data =
+    localStorage.getItem(NOTICE_STORAGE_KEY);
+
+
+  const box =
+    document.getElementById("importantNoticeText");
+
+
+  if(!box){
+    return;
+  }
+
+
+  if(!data){
+
+    box.innerHTML = `
+      <span class="notice-item">
+        अभी कोई महत्वपूर्ण सूचना उपलब्ध नहीं है।
+      </span>
+    `;
+
+    return;
+
+  }
+
+
+  try{
+
+    const notice =
+      JSON.parse(data);
+
+
+    box.innerHTML = `
+
+      <span class="notice-item">
+
+        🔴 ${notice.title}
+
+        <a
+          href="${notice.link}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          लिंक खोलें ↗
+        </a>
+
+      </span>
+
+    `;
+
+  }catch(e){
+
+    box.innerHTML = `
+      <span class="notice-item">
+        अभी कोई महत्वपूर्ण सूचना उपलब्ध नहीं है।
+      </span>
+    `;
+
+  }
 
 }
 
 
 document.addEventListener(
   "DOMContentLoaded",
-  renderNotices
+  showNotice
 );
 
 </script>
 
-<!-- ================= END IMPORTANT NOTICE ================= -->
+<!-- ================= महत्वपूर्ण सूचना समाप्त ================= -->
 <!-- ================= DEVELOPMENT WORKS ================= -->
 <section id="works" class="professional-works">
 
