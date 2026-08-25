@@ -53,33 +53,46 @@ footer{background:#092a19;color:#b9d1c2;text-align:center;padding:28px 20px;marg
 <div class="stat"><div class="icon">📄</div><strong>0</strong><span>सार्वजनिक दस्तावेज</span></div>
 <div class="stat"><div class="icon">📢</div><strong>0</strong><span>नई सूचनाएँ</span></div>
 </div>
-<!-- ================= IMPORTANT NOTICE ================= -->
+  <!-- ================= IMPORTANT NOTICE ================= -->
 
-<section class="important-notice-section">
+<section class="important-notice">
 
-  <div class="important-notice-box">
+  <div class="notice-bar">
 
-    <!-- लाल Title -->
-    <div class="important-notice-title">
+    <!-- LEFT TITLE -->
+    <div class="notice-title">
       📢 महत्वपूर्ण सूचना
     </div>
 
-    <!-- सूचना -->
-    <div class="important-notice-content">
+    <!-- RUNNING NOTICE -->
+    <div class="notice-running">
 
-      <span class="new-badge">NEW</span>
+      <div class="notice-moving">
 
-      <span id="noticeText">
-        ग्राम पंचायत की नई महत्वपूर्ण सूचना यहाँ प्रदर्शित होगी।
-      </span>
+        <span class="new-badge">NEW</span>
 
-      <a id="noticeLink"
-         href="#"
-         target="_blank">
-        अधिक जानकारी ↗
-      </a>
+        <span class="notice-message" id="noticeMessage">
+          ग्राम पंचायत की महत्वपूर्ण सूचना यहाँ प्रदर्शित होगी।
+        </span>
+
+        <span class="notice-separator">|</span>
+
+        <span class="notice-message">
+          नई सूचना एवं घोषणा देखने के लिए लिंक पर क्लिक करें।
+        </span>
+
+      </div>
 
     </div>
+
+    <!-- LINK BUTTON -->
+    <a
+      href="https://example.com"
+      target="_blank"
+      class="notice-link"
+    >
+      अधिक जानकारी ↗
+    </a>
 
   </div>
 
@@ -88,159 +101,216 @@ footer{background:#092a19;color:#b9d1c2;text-align:center;padding:28px 20px;marg
 
 <style>
 
-/* ================= NOTICE SECTION ================= */
+/* ================= IMPORTANT NOTICE ================= */
 
-.important-notice-section{
+.important-notice{
   width:100%;
-  margin:18px 0 10px;
+  margin:12px 0 4px;
 }
 
-.important-notice-box{
+
+/* MAIN BAR */
+
+.notice-bar{
+  width:100%;
+  height:46px;
 
   display:flex;
   align-items:center;
 
-  min-height:52px;
+  background:#ffffff;
 
-  background:#fff9d9;
+  border:1px solid #e0e0e0;
+  border-left:4px solid #dc2626;
 
-  border:1px solid #f0c419;
-
-  border-radius:6px;
+  border-radius:5px;
 
   overflow:hidden;
 
-  box-shadow:0 3px 10px rgba(0,0,0,.06);
-
+  box-shadow:0 2px 8px rgba(0,0,0,.07);
 }
 
 
-/* लाल IMPORTANT NOTICE BOX */
+/* RED TITLE */
 
-.important-notice-title{
+.notice-title{
+  height:100%;
 
-  position:relative;
+  display:flex;
+  align-items:center;
+
+  padding:0 18px;
 
   background:#dc2626;
 
   color:#ffffff;
 
-  font-size:14px;
-
+  font-size:13px;
   font-weight:900;
-
-  padding:15px 25px;
 
   white-space:nowrap;
 
+  position:relative;
 }
 
 
-/* Arrow shape */
+/* ARROW SHAPE */
 
-.important-notice-title::after{
+.notice-title::after{
 
   content:"";
 
   position:absolute;
 
-  right:-18px;
-
+  right:-16px;
   top:0;
 
   width:0;
   height:0;
 
-  border-top:26px solid transparent;
+  border-top:23px solid transparent;
+  border-bottom:23px solid transparent;
 
-  border-bottom:26px solid transparent;
+  border-left:16px solid #dc2626;
 
-  border-left:18px solid #dc2626;
-
-  z-index:2;
-
+  z-index:5;
 }
 
 
-/* सूचना वाला भाग */
+/* RUNNING AREA */
 
-.important-notice-content{
+.notice-running{
 
   flex:1;
 
-  display:flex;
+  overflow:hidden;
 
+  height:100%;
+
+  display:flex;
   align-items:center;
 
-  gap:12px;
-
-  padding:8px 20px 8px 35px;
-
-  font-size:14px;
-
-  font-weight:700;
-
-  color:#222;
-
+  margin-left:22px;
 }
 
 
-/* NEW Badge */
+/* MOVING CONTENT */
+
+.notice-moving{
+
+  display:flex;
+  align-items:center;
+
+  width:max-content;
+
+  white-space:nowrap;
+
+  animation:noticeScroll 25s linear infinite;
+}
+
+
+/* PAUSE ON HOVER */
+
+.notice-running:hover .notice-moving{
+  animation-play-state:paused;
+}
+
+
+/* NEW */
 
 .new-badge{
 
   background:#dc2626;
 
-  color:white;
+  color:#ffffff;
 
-  font-size:10px;
+  font-size:9px;
 
   font-weight:900;
 
-  padding:4px 7px;
+  padding:4px 6px;
 
-  border-radius:4px;
+  border-radius:3px;
 
-  white-space:nowrap;
+  margin-right:8px;
 
   animation:newBlink 1.2s infinite;
-
 }
 
 
-/* Link */
+/* MESSAGE */
 
-.important-notice-content a{
+.notice-message{
 
-  margin-left:auto;
+  color:#222222;
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+
+/* SEPARATOR */
+
+.notice-separator{
+
+  margin:0 18px;
+
+  color:#999999;
+
+  font-weight:700;
+}
+
+
+/* RIGHT LINK */
+
+.notice-link{
+
+  flex:0 0 auto;
+
+  margin-right:7px;
+
+  padding:7px 12px;
 
   background:#dc2626;
 
   color:#ffffff;
 
-  padding:8px 14px;
-
-  border-radius:5px;
+  border-radius:4px;
 
   text-decoration:none;
 
-  font-size:12px;
+  font-size:11px;
 
   font-weight:900;
 
   white-space:nowrap;
-
 }
 
 
-.important-notice-content a:hover{
+.notice-link:hover{
 
   background:#b91c1c;
 
 }
 
 
-/* NEW blinking */
+/* SCROLL ANIMATION */
+
+@keyframes noticeScroll{
+
+  0%{
+    transform:translateX(100%);
+  }
+
+  100%{
+    transform:translateX(-100%);
+  }
+
+}
+
+
+/* NEW BLINK */
 
 @keyframes newBlink{
 
@@ -259,44 +329,46 @@ footer{background:#092a19;color:#b9d1c2;text-align:center;padding:28px 20px;marg
 
 @media(max-width:700px){
 
-  .important-notice-box{
-
-    min-height:48px;
-
+  .important-notice{
+    margin:9px 0 3px;
   }
 
-  .important-notice-title{
-
-    padding:13px 16px;
-
-    font-size:11px;
-
+  .notice-bar{
+    height:43px;
   }
 
-  .important-notice-title::after{
+  .notice-title{
 
-    border-top-width:24px;
-
-    border-bottom-width:24px;
-
-  }
-
-  .important-notice-content{
-
-    padding:7px 12px 7px 25px;
-
-    gap:7px;
-
-    font-size:11px;
-
-  }
-
-  .important-notice-content a{
-
-    padding:7px 9px;
+    padding:0 10px;
 
     font-size:10px;
+  }
 
+  .notice-title::after{
+
+    right:-13px;
+
+    border-top-width:21.5px;
+    border-bottom-width:21.5px;
+
+    border-left-width:13px;
+  }
+
+  .notice-running{
+
+    margin-left:17px;
+  }
+
+  .notice-message{
+
+    font-size:10px;
+  }
+
+  .notice-link{
+
+    padding:6px 8px;
+
+    font-size:9px;
   }
 
 }
@@ -306,30 +378,29 @@ footer{background:#092a19;color:#b9d1c2;text-align:center;padding:28px 20px;marg
 
 <script>
 
-/* ================= NOTICE DATA ================= */
+/* ================= NOTICE LINK ================= */
 
-const importantNotice = {
+/*
+  यहाँ अपनी सूचना का link डालें
+*/
 
-  text:
-    "ग्राम पंचायत विकास कार्यों की जानकारी के लिए यहाँ क्लिक करें",
+const importantNoticeLink =
+  "https://example.com";
 
-  link:
-    "https://example.com"
-
-};
-
-
-/* ================= SHOW NOTICE ================= */
 
 document.addEventListener(
   "DOMContentLoaded",
   function(){
 
-    document.getElementById("noticeText").textContent =
-      importantNotice.text;
+    const link =
+      document.querySelector(".notice-link");
 
-    document.getElementById("noticeLink").href =
-      importantNotice.link;
+    if(link){
+
+      link.href =
+        importantNoticeLink;
+
+    }
 
   }
 );
